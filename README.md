@@ -17,6 +17,7 @@ with the image captured previously, if it is same, it will preceed to the next s
 it will preceed to the second step (second one seperated by comma).
 
 <p align="center">
-  <img src="http://14.63.168.58:3000/registered_image/capture1.png" width="350"/>
-  <img src="http://14.63.168.58:3000/registered_image/capture2.png" width="350"/>
+  <img src="http://14.63.168.58:3000/registered_image/capture1.png" width="500"/>
+  <br>
+  <img src="http://14.63.168.58:3000/registered_image/capture2.png" width="500"/>
 </p>

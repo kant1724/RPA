@@ -15,3 +15,8 @@ execute the record and you will see how it works.
 IS_EQUAL_TO_IMAGE : if you set axis with this action and execute, RPA check area of image that you point and compare
 with the image captured previously, if it is same, it will preceed to the next step (first one seperated by comma) else 
 it will preceed to the second step (second one seperated by comma).
+
+<p align="center">
+  <img src="http://14.63.168.58:3000/registered_image/capture1.png" width="350"/>
+  <img src="http://14.63.168.58:3000/registered_image/capture2.png" width="350"/>
+</p>

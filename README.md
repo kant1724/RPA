@@ -17,6 +17,9 @@ with the image captured previously, if it is same, it will preceed to the next s
 it will preceed to the second step (second one seperated by comma).
 
 
+## WRITE TEXT
 <img src="http://14.63.168.58:3000/registered_image/capture1.png" width="700"/>
 <br>
+
+## CLICK MOUSE
 <img src="http://14.63.168.58:3000/registered_image/capture2.png" width="700"/>

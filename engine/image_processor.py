@@ -15,7 +15,7 @@ def save_image(image_path):
 def capture_image(obj, pos, text):
     now = datetime.datetime.now()
     file_name = now.strftime("%Y%m%d%H%M%S") + '.jpg'
-    image_path = './save/image/' + file_name
+    image_path = './files/save/image/' + file_name
     img = PIL.ImageGrab.grab()
     width, height = img.size
     if text != None and text != '':

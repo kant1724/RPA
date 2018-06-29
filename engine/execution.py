@@ -19,7 +19,8 @@ def execute(obj, adjust_yn):
     global stop_yn
     diable_all_keyboard_mode(obj)
     excel_data = em.read_excel(obj)
-    obj.showMinimized()    
+    obj.showMinimized()
+    sa = selenium_action.Selenium_action()
     for data in excel_data:
         next_step = 1
         while next_step - 1 < len(obj.action_arr):            
@@ -35,9 +36,13 @@ def execute(obj, adjust_yn):
                 axis = axis_adjustment.adjust(axis, img)
             value = vp.reprocess_value(obj.keypress_arr[i])
             ns = obj.next_step_arr[i].split(",")
-            next_step = int(ns[0])
-            if obj.action_arr[i] == 'IE_FULL_SCREEN':
-                selenium_action.ie_full_screen()
+            next_step = int(ns[0])            
+            if obj.action_arr[i] == 'IE_OPEN':
+                sa.ie_open()
+            elif obj.action_arr[i] == 'IE_FULL_SCREEN':
+                sa.ie_full_screen()
+            elif obj.action_arr[i] == 'IE_GO_TO_SITE':
+                sa.ie_go_to_site(value)
             elif obj.action_arr[i] == 'MOUSE_CLICK':
                 action.mouse_click(obj, axis)
             elif obj.action_arr[i] == 'MOUSE_ONLY_CLICK':

@@ -203,7 +203,7 @@ def second_list_event(obj, event):
         obj.second_list_currow = -1
     if obj.second_list_currow >= 0:
         obj.third_list.setCurrentRow(obj.second_list_currow)
-        fourth_list_when = ['KEYPRESS_BY_IMAGE', 'KEYPRESS_ONLY', 'KEYPRESS', 'COPY_AND_PASTE', 'GET_TEXT_VALUE']
+        fourth_list_when = ['KEYPRESS_BY_IMAGE', 'KEYPRESS_ONLY', 'KEYPRESS', 'COPY_AND_PASTE', 'GET_TEXT_VALUE', 'IE_GO_TO_SITE']
         if obj.action_arr[obj.third_list_currow] in fourth_list_when:
             obj.fourth_list.addItem(obj.keypress_arr[obj.second_list_currow])
             obj.fourth_list.setCurrentRow(0)
@@ -218,7 +218,7 @@ def third_list_event(obj, event):
     obj.sixth_list.clear()
     obj.third_list_currow = obj.second_list_currow = obj.third_list.selectedIndexes()[0].row()
     obj.second_list.setCurrentRow(obj.third_list_currow)
-    fourth_list_when = ['KEYPRESS_BY_IMAGE', 'KEYPRESS_ONLY', 'KEYPRESS', 'COPY_AND_PASTE', 'GET_TEXT_VALUE']
+    fourth_list_when = ['KEYPRESS_BY_IMAGE', 'KEYPRESS_ONLY', 'KEYPRESS', 'COPY_AND_PASTE', 'GET_TEXT_VALUE', 'IE_GO_TO_SITE']
     if obj.action_arr[obj.third_list_currow] in fourth_list_when:
         obj.fourth_list.addItem(obj.keypress_arr[obj.second_list_currow])
         obj.fourth_list.setCurrentRow(0)

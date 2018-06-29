@@ -15,12 +15,12 @@ def save_image(image_path):
 def capture_image(obj, pos, text):
     now = datetime.datetime.now()
     file_name = now.strftime("%Y%m%d%H%M%S") + '.jpg'
-    image_path = './save/image/' + file_name
+    image_path = './files/save/image/' + file_name
     img = PIL.ImageGrab.grab()
     width, height = img.size
     if text != None and text != '':
         draw = PIL.ImageDraw.Draw(img)
-        font = PIL.ImageFont.truetype("./fonts/ARIALUNI.TTF", 30)
+        font = PIL.ImageFont.truetype("./files/fonts/ARIALUNI.TTF", 30)
         draw.text((pos[0] + 10, pos[1] + 10), unicodedata.normalize("NFC", text), (255,0,0), font=font)    
     pix = img.load()
     for i in range(width):
@@ -31,7 +31,7 @@ def capture_image(obj, pos, text):
                         continue                
                     pix[i, j] = (255, 0, 0)
     img2 = img.crop((pos[0] - 120, pos[1] - 60, pos[0] + 120, pos[1] + 60))
-    image_portion_path = './save/image/p_' + file_name
+    image_portion_path = './files/save/image/p_' + file_name
     img.save(image_path)
     img2.save(image_portion_path)
     return image_path, image_portion_path

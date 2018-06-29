@@ -3,7 +3,7 @@ import easygui
 import os
 
 def save_file(obj):
-    default_path = os.path.abspath("./save")
+    default_path = os.path.abspath("./files/save")
     path = easygui.filesavebox(default=default_path + "\*.dat")
     if path == None:
         return
@@ -24,7 +24,7 @@ def save_file(obj):
         pickle.dump(data, f)
 
 def save_register_file(obj):
-    default_path = os.path.abspath("./save")
+    default_path = os.path.abspath("./files/save")
     path = easygui.filesavebox(default=default_path + "\*.txt")
     if path == None:
         return

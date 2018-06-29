@@ -1,8 +1,9 @@
-easygui==0.98.1
 pandas==0.20.3
+selenium==3.13.0
+PyAutoGUI==0.9.36
 keyboard==0.13.1
 mouse==0.7.0
-PyAutoGUI==0.9.36
+easygui==0.98.1
 Pillow==5.1.0
 PyQt5==5.10.1
 win32gui==221.6

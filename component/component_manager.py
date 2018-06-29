@@ -47,6 +47,9 @@ def first_list_label(obj):
 
 def first_list(obj):
     ll = QListWidget(obj)
+    ll.addItem('IE_OPEN')
+    ll.addItem('IE_FULL_SCREEN')
+    ll.addItem('IE_GO_TO_SITE')
     ll.addItem('MOUSE_CLICK')
     ll.addItem('MOUSE_TP_CLICK')
     ll.addItem('KEYPRESS_ONLY')

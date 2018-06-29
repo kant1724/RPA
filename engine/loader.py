@@ -16,7 +16,7 @@ def set_arr_from_data(obj, data):
     obj.image_portion_arr = eval(data["image_portion_arr"])
 
 def load_file(obj):
-    default_path = os.path.abspath("./save")
+    default_path = os.path.abspath("./files/save")
     path = easygui.fileopenbox(default=default_path + "\*.*")
     if path == None:
         return
@@ -37,7 +37,7 @@ def load_file(obj):
             obj.second_list.addItem(action)
 
 def load_file_in_register(obj):
-    default_path = os.path.abspath("./save")
+    default_path = os.path.abspath("./files/save")
     path = easygui.fileopenbox(default=default_path + "\*.*")
     if path == None:
         return

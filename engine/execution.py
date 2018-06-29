@@ -1,5 +1,6 @@
 import time
 from engine import action
+from engine.selenium_ctrl import selenium_action 
 from engine import image_processor as ip
 from engine import value_processor as vp
 from excel import excel_manager as em
@@ -35,7 +36,9 @@ def execute(obj, adjust_yn):
             value = vp.reprocess_value(obj.keypress_arr[i])
             ns = obj.next_step_arr[i].split(",")
             next_step = int(ns[0])
-            if obj.action_arr[i] == 'MOUSE_CLICK':
+            if obj.action_arr[i] == 'IE_FULL_SCREEN':
+                selenium_action.ie_full_screen()
+            elif obj.action_arr[i] == 'MOUSE_CLICK':
                 action.mouse_click(obj, axis)
             elif obj.action_arr[i] == 'MOUSE_ONLY_CLICK':
                 action.mouse_only_click(obj)

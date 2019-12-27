@@ -21,6 +21,7 @@ def execute(obj, adjust_yn):
     excel_data = em.read_excel(obj)
     obj.showMinimized()
     sa = selenium_action.Selenium_action()
+    increment = 0
     for data in excel_data:
         next_step = 1
         while next_step - 1 < len(obj.action_arr):            
@@ -37,7 +38,10 @@ def execute(obj, adjust_yn):
             value = vp.reprocess_value(obj.keypress_arr[i])
             ns = obj.next_step_arr[i].split(",")
             next_step = int(ns[0])            
-            if obj.action_arr[i] == 'IE_OPEN':
+            if obj.action_arr[i] == 'DOWN INCREMENT':
+                for m in range(increment):
+                    action.down_increment()
+            elif obj.action_arr[i] == 'IE_OPEN':
                 sa.ie_open()
             elif obj.action_arr[i] == 'IE_FULL_SCREEN':
                 sa.ie_full_screen()
@@ -90,6 +94,8 @@ def execute(obj, adjust_yn):
                     next_step = int(ns[0])
                 else:
                     next_step = int(ns[1])
+    increment += 1
+
 def differ_axis(axis, relative_dist):
     axis[0] = str(int(axis[0]) - int(relative_dist[0]))
     axis[1] = str(int(axis[1]) - int(relative_dist[1]))

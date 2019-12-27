@@ -60,6 +60,7 @@ def first_list(obj):
     ll.addItem("COPY_AND_PASTE")
     ll.addItem("GET_TEXT_VALUE")
     ll.addItem('GET_TEXT_AND_WRITE_TO_FILE')
+    ll.addItem('DOWN INCREMENT')
     ll.setGeometry(cp.FIRST_LIST_X_START, cp.FIRST_LIST_Y_START, cp.FIRST_LIST_WIDTH, cp.FIRST_LIST_HEIGHT)    
     return ll
 

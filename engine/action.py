@@ -52,7 +52,10 @@ def keypress_only(obj, value):
         gcw.press_down()
     else:
         gcw.write_text(value)
-        
+
+def down_increment():
+    gcw.press_down()
+
 def keypress(obj, axis, value, data):
     obj.c.click((int(axis[0]), int(axis[1])))
     gcw.press_ctrl_a()

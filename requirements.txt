@@ -4,6 +4,6 @@ PyAutoGUI==0.9.36
 keyboard==0.13.1
 mouse==0.7.0
 easygui==0.98.1
-Pillow==5.1.0
+Pillow==8.1.1
 PyQt5==5.10.1
 win32gui==221.6
